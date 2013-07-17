@@ -74,7 +74,7 @@ function se_get_excluded_ids()
 function se_meta_box_init()
 {
 	// Add this metabox to all post types
-	$post_types=get_post_types('','names'); 
+	$post_types = get_post_types(array('exclude_from_search' => false), 'names');
 	foreach ($post_types as $post_type ) {
 		add_meta_box( 
 			'search_excluder_post_section',
