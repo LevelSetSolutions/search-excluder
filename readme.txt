@@ -17,7 +17,7 @@ The edit post page will contain a new meta box with the option for exluding from
 
 == Screenshots == 
 
-
+http://raw.github.com/LevelSetSolutions/search-excluder/v0.2/search-excluder.png
 
 == Installation ==
 
@@ -34,8 +34,11 @@ The edit post page will contain a new meta box with the option for exluding from
 
 == Upgrade Notice ==
 
-
+= 0.2 =
+This version fixes a show stopping bug.  Upgrade immediately.
 
 == Frequently Asked Questions ==
 
+= Who needs this =
 
+Sometimes you want to create a public post but do not want the user to find it.
