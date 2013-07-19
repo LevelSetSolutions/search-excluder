@@ -15,6 +15,10 @@ Adds the ability to easily exclude individual posts/pages from search results.
 Adds the ability to easily exclude individual posts/pages from search results. 
 The edit post page will contain a new meta box with the option for exluding from search.
 
+== Screenshots == 
+
+
+
 == Installation ==
 
 1. Upload `search-excluder` to the `/wp-content/plugins/` directory
@@ -27,3 +31,11 @@ The edit post page will contain a new meta box with the option for exluding from
 
 = 0.1 =
 * Initial release
+
+== Upgrade Notice ==
+
+
+
+== Frequently Asked Questions ==
+
+
