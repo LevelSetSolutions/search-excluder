@@ -17,7 +17,7 @@ The edit post page will contain a new meta box with the option for exluding from
 
 == Screenshots == 
 
-http://raw.github.com/LevelSetSolutions/search-excluder/v0.2/search-excluder.png
+1. Edit Post View
 
 == Installation ==
 
