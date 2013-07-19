@@ -1,10 +1,10 @@
 <?php
 /**
  * Plugin Name: Search Excluder
- * Plugin URI: http://www.levelsetsolutions.com/
+ * Plugin URI: https://github.com/LevelSetSolutions/search-excluder
  * Description: Provides the ability to exclude posts from search results.
  * Author: LevelSet Solutions
- * Version: 0.1
+ * Version: 0.2
  * Author URI: http://www.levelsetsolutions.com/
  */
 
@@ -105,6 +105,11 @@ function se_add_inner_meta_box($post)
  */
 function se_save_post( $post_id )
 {
+	if (!isset($_POST['se_save_meta_box']))
+	{
+		return;
+	}
+
 	// verify the nonce
 	if ( !wp_verify_nonce($_POST['se_save_meta_box'], 'se_save_post') )
 	{
@@ -118,6 +123,14 @@ function se_save_post( $post_id )
 		return;
 	}
 
-	// save the meta data
-	update_post_meta( $post_id, 'se_exclude_from_search', $_POST['se_exclude_from_search'] );
+	if ( isset($_POST['se_exclude_from_search']) )
+	{
+		// save the meta data
+		update_post_meta( $post_id, 'se_exclude_from_search', $_POST['se_exclude_from_search'] );
+	}
+	else
+	{
+		// delete the meta data
+		delete_post_meta( $post_id, 'se_exclude_from_search' );
+	}
 }
